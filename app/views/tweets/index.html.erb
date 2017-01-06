@@ -2,9 +2,12 @@
 
 <ul>
     <% @tweets.each do |tweet| %>
-        <li>
-            <strong> <%= tweet.handle %> </strong> - <%= tweet.content %>
-            <%= link_to "Click for more info", tweet_path(tweet) %>
-        </li>
+        <li> <strong> <%= tweet.handle %> </strong> <br><%= tweet.content %></li>
+        <%= time_ago_in_words(Date.today - 1) %>
+        <p><%= link_to "Click to View Tweet", tweet_path(tweet) %></p>
     <% end %>
 </ul>
+
+<%= link_to "Post a new Tweet", new_tweet_path(@tweet) %>
+
+<%#= tweet.created_at.strftime("Created on %m/%d/%Y" " at %I:%M%p") %>

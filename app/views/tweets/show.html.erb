@@ -1,1 +1,15 @@
-<h1>Show</h1>
+<p> <%= @tweet.handle %></p>
+<p> <%= @tweet.content %></p>
+<%= @tweet.created_at.strftime("Created on %m/%d/%Y" " at %I:%M%p") %>
+<%= time_ago_in_words(@tweet.created_at) + " ago" %>
+
+<p><%= link_to "Edit this tweet.", edit_tweet_path(@tweet) %></p>
+
+<br>
+
+<%= link_to "DELETE this tweet!", tweet_path, method: :delete, data: { confirm: "Are you sure you want to delete this tweet?"} %>
+
+<br>
+
+
+<p><%= link_to "Go back to all tweets", tweets_path %></p>

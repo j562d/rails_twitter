@@ -1,1 +1,19 @@
 <h1>Edit</h1>
+
+<%= form_for @tweet do |f| %>
+
+    <div>
+        <%= f.label :handle %>
+        <%= f.text_field :handle %>
+    </div>
+
+    <div>
+        <%= f.label :content %>
+        <%= f.text_field :content %>
+    </div>
+
+    <%= f.submit "Edit this Tweet" %>
+
+<% end %>
+
+<%= link_to "Back to all Tweets", tweets_path %>
