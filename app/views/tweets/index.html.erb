@@ -1,0 +1,10 @@
+<h1>Tweets</h1>
+
+<ul>
+    <% @tweets.each do |tweet| %>
+        <li>
+            <strong> <%= tweet.handle %> </strong> - <%= tweet.content %>
+            <%= link_to "Click for more info", tweet_path(tweet) %>
+        </li>
+    <% end %>
+</ul>
