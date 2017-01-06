@@ -16,7 +16,7 @@ class TweetsController < ApplicationController
     @tweet = Tweet.new(tweet_params)
 
     if @tweet.save
-      redirect_to tweets
+      redirect_to tweets_path
     else
       render :new
     end
@@ -43,7 +43,7 @@ class TweetsController < ApplicationController
 
   private
   def tweet_params
-    params.require(:handle, :content)
+    params.require(:tweet).permit(:handle, :content)
   end
 
 end
