@@ -1,13 +1,40 @@
+
+<div class="jumbotron text-center">
+    <div class="container" >
+    <h1 style="color: white"></h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
+</div>
+
+<div>
+<img class="avatar" src="https://c1.staticflickr.com/3/2693/4111117620_2945c576c4.jpg">
+</div>
+
+
 <h1>Tweets</h1>
 
-<ul>
+<div id="main">
+<div id="child">
     <% @tweets.each do |tweet| %>
-        <li> <strong> <%= tweet.handle %> </strong> <br><%= tweet.content %></li>
+        <strong> <%= tweet.handle %> </strong> <br><%= tweet.content %>
         <%= time_ago_in_words(tweet.created_at.localtime) + " ago" %>
         <p><%= link_to "Click to View Tweet", tweet_path(tweet) %></p>
     <% end %>
-</ul>
+</div>
+</div>
+
+
+
 
 <%= link_to "Post a new Tweet", new_tweet_path(@tweet) %>
 
 <%#= tweet.created_at.strftime("Created on %m/%d/%Y" " at %I:%M%p") %>
+<p><a href="/pages/home">Home</a></p>

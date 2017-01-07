@@ -10,6 +10,44 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require rails_bootstrap_forms
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+.jumbotron {
+  background: url('http://www.planwallpaper.com/static/images/Fall-Nature-Background-Pictures.jpg') no-repeat center center;
+}
+
+#main {
+    text-align: center;
+    border: 1px solid #000;
+}
+
+body {
+  padding-top: 70px;
+}
+
+.navbar {
+   background-color: white;
+}
+
+#child {
+    display: inline-block;
+    text-align: left;
+    padding: 50px;
+}
+
+.avatar {
+    border: 5px solid #fff;
+    border-radius: 12px;
+    box-shadow: 0 1px 1px rgba(136,153,166,0.15);
+    height: 200px;
+    position: relative;
+    width: 200px;
+    float: left;
+}
