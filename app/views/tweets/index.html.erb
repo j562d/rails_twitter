@@ -5,7 +5,7 @@
 <div>
     <% @tweets.each do |tweet| %>
   <div class="panel-heading">
-        <strong> <%= tweet.handle %> </strong>
+        <strong>Posted by <%= tweet.handle %> </strong>
         <%= time_ago_in_words(tweet.created_at.localtime) + " ago" %>
       </div>
     <div class="panel-body">
@@ -15,9 +15,10 @@
     <% end %>
 
 
-
+<button type="button" class="btn btn-info">
 <%= link_to "Post a new Tweet", new_tweet_path(@tweet) %>
-
+</button>
 <%#= tweet.created_at.strftime("Created on %m/%d/%Y" " at %I:%M%p") %>
-<p><a href="/pages/home">Home</a></p>
+
 </div>
+

@@ -42,6 +42,10 @@ class TweetsController < ApplicationController
      redirect_to tweets_path
    end
 
+  def sort
+   @tweets.sort_by &:created_at
+  end
+
 
 
   private
