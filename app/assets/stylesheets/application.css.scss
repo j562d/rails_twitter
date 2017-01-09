@@ -47,7 +47,15 @@ body {
     border-radius: 12px;
     box-shadow: 0 1px 1px rgba(136,153,166,0.15);
     height: 200px;
-    position: relative;
+    position: absolute;
     width: 200px;
     float: left;
 }
+
+.container {
+  text-align: center;
+}
+
+
+
+

@@ -18,6 +18,7 @@ class TweetsController < ApplicationController
     @tweet = Tweet.new(tweet_params)
 
     if @tweet.save
+      flash[:success] = "Tweet succesfully created"
       redirect_to tweets_path
     else
       render :new
