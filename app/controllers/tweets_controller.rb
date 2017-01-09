@@ -4,7 +4,13 @@ class TweetsController < ApplicationController
 
   def index
     @tweets = Tweet.all
+    if params[:sort]
+      @tweets = Tweet.order(params[:sort])
+
+#   Tweet.order(:created_at)
+#   Tweet.all.order. _____
   end
+end
 
   def show
 

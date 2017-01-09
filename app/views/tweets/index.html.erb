@@ -3,6 +3,12 @@
 <h1>Tweets</h1>
 
 <div>
+<%= link_to "Sort by Date", :sort => 'created_at' %>
+<br>
+<%= link_to "Sort by Handle", :sort => 'Handle' %>
+</div>
+<br>
+<div>
     <% @tweets.each do |tweet| %>
   <div class="panel-heading">
         <strong>Posted by <%= tweet.handle %> </strong>
